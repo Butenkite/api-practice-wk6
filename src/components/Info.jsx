@@ -1,4 +1,4 @@
-export default function Info(props) {
+export default function Info() {
     return(
         <>
             <p>info component</p>

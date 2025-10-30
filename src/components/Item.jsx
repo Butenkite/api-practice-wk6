@@ -38,6 +38,11 @@ useEffect(() => {
     setLoading(true);
   }
 
+  function showPrev() {
+    setPokeId((prev) => prev - 1);
+    setLoading(true);
+  }
+
   if (loading) {
     return (
       <>
@@ -64,9 +69,12 @@ useEffect(() => {
   console.log(images);
   return (
     <>
-      {pokemon !== null && <Picture images={images} loading={loading}/>}
-      <Info />
-      <button onClick={showNext}>Next</button>
+      <div>
+        {pokemon !== null && <Picture images={images} loading={loading}/>}
+        <Info />
+        <div>{pokeId != 1 && <button onClick={showPrev}>Previous</button>}</div>
+        <button onClick={showNext}>Next</button>
+      </div>
     </>
   );
 }
