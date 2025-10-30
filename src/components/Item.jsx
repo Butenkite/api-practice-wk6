@@ -66,12 +66,11 @@ useEffect(() => {
     );
   }
 
-  console.log(images);
   return (
     <>
       <div>
         {pokemon !== null && <Picture images={images} loading={loading}/>}
-        <Info />
+        <Info pokeData={pokemon}/>
         <div>{pokeId != 1 && <button onClick={showPrev}>Previous</button>}</div>
         <button onClick={showNext}>Next</button>
       </div>

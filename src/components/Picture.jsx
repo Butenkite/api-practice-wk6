@@ -5,8 +5,6 @@ export default function Picture({ images, loading }) {
 
     const frontShiny = images.front_shiny;
     const frontDefault = images.front_default;
-    console.log(frontDefault);
-    console.log(frontShiny);
 
     return (
         <div>
